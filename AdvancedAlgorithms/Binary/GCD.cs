@@ -72,7 +72,7 @@ namespace AdvancedAlgorithms.Binary
             // a and b odd, a < b
 
             // since subtracting two odd numbers gives a even number
-            // divide ( b - a ) by 2 to resuce calculations
+            // divide ( b - a ) by 2 to reduce calculations
             return Find(a, (b - a) >> 1);
         }
 
