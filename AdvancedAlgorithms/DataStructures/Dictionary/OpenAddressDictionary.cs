@@ -77,7 +77,7 @@ namespace AdvancedAlgorithms.DataStructures.Dictionary
 
             if (hashArray[index] == null)
             {
-                hashArray[index] = new Dictionary<K, V>.DictionaryNode<TK, TV>(key, value);
+                hashArray[index] = new DictionaryNode<TK, TV>(key, value);
             }
             else
             {
@@ -105,7 +105,7 @@ namespace AdvancedAlgorithms.DataStructures.Dictionary
                         throw new Exception("DEictionary is full");
                     }
                 }
-                hashArray[index] = new Dictionary<K, V>.DictionaryNode<TK, TV>(key, value);
+                hashArray[index] = new DictionaryNode<TK, TV>(key, value);
             }
             Count++;
         }
@@ -196,7 +196,7 @@ namespace AdvancedAlgorithms.DataStructures.Dictionary
 
         public void Clear()
         {
-            hashArray = new Dictionary<TK, TV>.DictionaryNode<TK, TV>[bucketSize];
+            hashArray = new DictionaryNode<TK, TV>[bucketSize];
             Count = 0;
         }
 
@@ -337,7 +337,7 @@ namespace AdvancedAlgorithms.DataStructures.Dictionary
 
         public IEnumerator<KeyValuePair<TK, TV>> GetEnumerator()
         {
-            return new OpenAddressDictionary<TK, TV>(hashArray, hashArray.Length);
+            return new OpenAddressDictionaryEnumerator<TK, TV>(hashArray, hashArray.Length);
         }
 
         internal class OpenAddressDictionaryEnumerator<TK, TV> : IEnumerator<KeyValuePair<TK, TV>>

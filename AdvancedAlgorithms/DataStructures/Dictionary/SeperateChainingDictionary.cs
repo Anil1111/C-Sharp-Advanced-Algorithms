@@ -1,5 +1,6 @@
 ﻿using AdvancedAlgorithms.DataStructures.LinkedList;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -376,9 +377,5 @@ namespace AdvancedAlgorithms.DataStructures.Dictionary
                 HashList = null;
             }
         }
-
-
-
-
     }
 }
