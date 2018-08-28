@@ -183,7 +183,7 @@ namespace AdvancedAlgorithms.DataStructures.Graph.AdjacencyList
         /// <returns></returns>
         internal DiGraph<T> Clone()
         {
-            var newGraph = new DiGraph<T();
+            var newGraph = new DiGraph<T>();
 
             foreach (var vertex in Verticles)
             {
